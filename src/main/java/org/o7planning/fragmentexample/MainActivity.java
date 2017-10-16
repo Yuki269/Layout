@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements ContactInterface 
         FragmentContactDetail fragmentContactDetail = (FragmentContactDetail)
                 getFragmentManager().findFragmentById(R.id.fragmentDetail);
 
-        if(fragmentContactDetail != null) {
+        if(fragmentContactDetail != null && fragmentContactDetail.isInLayout()) {
             fragmentContactDetail.setDetail(contact);
         }else {
             Intent intent = new Intent(MainActivity.this , ContactDetail.class);
